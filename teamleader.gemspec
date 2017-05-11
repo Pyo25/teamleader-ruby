@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Teamleader::VERSION
   spec.authors       = ["Pierre-Yves Orban"]
   spec.email         = ["pyo@javry.com"]
-  spec.homepage      = 'https://github.com/pyorban/teamleader-ruby'
+  spec.homepage      = 'https://github.com/Pyo25/teamleader-ruby'
 
   spec.summary       = %q{A Ruby wrapper around Teamleader.eu API}
   spec.description   = %q{A ruby wrapper around Teamleader.eu API.}
