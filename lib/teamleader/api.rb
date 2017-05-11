@@ -3,11 +3,6 @@ require 'json'
 require 'net/http'
 require 'uri'
 
-# require File.expand_path(File.join(File.dirname(__FILE__), 'domain_search'))
-# require File.expand_path(File.join(File.dirname(__FILE__), 'email_count'))
-# require File.expand_path(File.join(File.dirname(__FILE__), 'email_finder'))
-# require File.expand_path(File.join(File.dirname(__FILE__), 'email_verifier'))
-
 module Teamleader
   API_BASE_URL = "https://app.teamleader.eu/api"
 
@@ -20,8 +15,16 @@ module Teamleader
       @http.use_ssl = true
     end
 
-    def get_users
-      request "/getUsers.php"
+    def get_users(params={})
+      request "/getUsers.php", params
+    end
+
+    def get_departments
+      request "/getDepartments.php"
+    end
+
+    def get_tags
+      request "/getTags.php"
     end
 
     # Returns the ID of the contact
@@ -35,7 +38,7 @@ module Teamleader
     # Returns the ID of the company
     def add_company(params={})
       raise "name is required" if params[:name].nil?
-      request "/getCompanies.php", params
+      request "/addCompany.php", params
     end
 
     def get_company(id)
@@ -76,16 +79,21 @@ module Teamleader
       response = @http.post "/api" + path, data, headers
       code = Integer(response.code)
       if code >= 200 && code < 300
-        JSON.parse response.body, :symbolize_names => true
+        begin
+          JSON.parse response.body, :symbolize_names => true
+        rescue
+          response.body
+        end
       elsif code == 505
         raise "Error: API rate limit reached"
       else
+        err = "unknown error"
         begin
-          m = JSON.parse response.body
-          raise "HTTP Error #{code}: " + m["reason"]
+          err = JSON.parse(response.body)["reason"]
         rescue
-          raise "HTTP Error #{code}: " + response.body
+          err = "#{response.body}"
         end
+        raise "HTTP Error #{code}: " + err
       end
     end
   end
