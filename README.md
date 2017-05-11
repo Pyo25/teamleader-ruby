@@ -68,3 +68,5 @@ The Teamleader GEM is released under the MIT License.
 
 ## Credits
 This gem is inspired by the [hunterio gem](https://github.com/prospectio/hunterio/) made by Vincenzo Ruggiero
+
+Made with ️❤️️️ by [Javry](https://javry.com) in Belgium.

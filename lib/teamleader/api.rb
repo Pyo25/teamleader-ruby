@@ -24,6 +24,15 @@ module Teamleader
       request "/getUsers.php"
     end
 
+    # Returns the ID of the contact
+    def add_contact(params={})
+      raise "forename is required" if params[:forename].nil?
+      raise "surname is required" if params[:surname].nil?
+      raise "email is required" if params[:email].nil?
+      request "/addContact.php", params
+    end
+
+    # Returns the ID of the company
     def add_company(params={})
       raise "name is required" if params[:name].nil?
       request "/getCompanies.php", params
@@ -37,6 +46,13 @@ module Teamleader
       raise "amount is required" if params[:amount].nil?
       raise "pageno is required" if params[:pageno].nil?
       request "/getCompanies.php", params
+    end
+
+    def add_invoice(params={})
+      raise "contact_or_company" if params[:contact_or_company].nil?
+      raise "contact_or_company_id" if params[:contact_or_company_id].nil?
+      raise "sys_department_id" if params[:sys_department_id].nil?
+      request "/addInvoice.php", params    
     end
 
     def get_invoice(id)
