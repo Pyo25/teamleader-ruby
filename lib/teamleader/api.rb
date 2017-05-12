@@ -55,7 +55,7 @@ module Teamleader
       raise "contact_id is required" if params[:contact_id].nil?
       raise "company_id is required" if params[:company_id].nil?
       raise "mode is required" if params[:mode].nil?
-      raise "mode must be 'link' or 'unlink'" unless ['link', 'unlink'].include?(params[:status])
+      raise "mode must be 'link' or 'unlink'" unless ['link', 'unlink'].include?(params[:mode])
       request "/linkContactToCompany.php", params
     end
 
