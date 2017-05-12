@@ -47,6 +47,13 @@ teamleader.get_tags
 
 ```ruby
 teamleader.add_contact :forename => "John", :surname => "Doe", :email => "john.doe@provider.com"
+teamleader.update_contact({:contact_id => 123, :track_changes => 0, :forename => "Johnny"})
+teamleader.delete_contact({:contact_id => 123})
+teamleader.link_contact_to_company({:contact_id => 123, :company_id => 456, :mode => "link"})
+teamleader.get_contacts({:amount => 100, :pageno => 0, :searchby => "John"}) # pagination starts at 0
+teamleader.get_contact({:contact_id => 123})
+teamleader.get_contacts_by_company({:company_id => 123})
+teamleader.get_contact_company_relations({:amount => 10, :pageno => 0})
 ```
 
 ### Companies

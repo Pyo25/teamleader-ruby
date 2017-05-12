@@ -35,6 +35,47 @@ module Teamleader
       request "/addContact.php", params
     end
 
+    def get_contact(params={})
+      raise "contact_id is required" if params[:contact_id].nil?
+      request "/getContact.php", params
+    end
+
+    def update_contact(params={})
+      raise "contact_id is required" if params[:contact_id].nil?
+      raise "track_changes is required" if params[:track_changes].nil?
+      request "/updateContact.php", params
+    end
+
+    def delete_contact(params={})
+      raise "contact_id is required" if params[:contact_id].nil?
+      request "/deleteContact.php", params
+    end
+
+    def link_contact_to_company(params={})
+      raise "contact_id is required" if params[:contact_id].nil?
+      raise "company_id is required" if params[:company_id].nil?
+      raise "mode is required" if params[:mode].nil?
+      raise "mode must be 'link' or 'unlink'" unless ['link', 'unlink'].include?(params[:status])
+      request "/linkContactToCompany.php", params
+    end
+
+    def get_contacts(params={})
+      raise "amount is required" if params[:amount].nil?
+      raise "pageno is required" if params[:pageno].nil?
+      request "/getContacts.php", params
+    end
+
+    def get_contacts_by_company(params={})
+      raise "company_id is required" if params[:company_id].nil?
+      request "/getContactsByCompany.php", params
+    end
+
+    def get_contact_company_relations(params={})
+      raise "amount is required" if params[:amount].nil?
+      raise "pageno is required" if params[:pageno].nil?
+      request "/getContactCompanyRelations.php", params
+    end
+
     # Returns the ID of the company
     def add_company(params={})
       raise "name is required" if params[:name].nil?
