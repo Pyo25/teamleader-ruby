@@ -35,25 +35,58 @@ When a method expects a hash as argument, the hash keys have the same name as de
 
 If a required parameter is missing or if the API returns an error, the method will throw an exception.
 
-### Users
+### General
 
 ```ruby
 teamleader.get_users
+teamleader.get_departments
+teamleader.get_tags
 ```
+
+### Contacts
+
+```ruby
+teamleader.add_contact :forename => "John", :surname => "Doe", :email => "john.doe@provider.com"
+```
+
 ### Companies
 
 ```ruby
 teamleader.add_company({:name => "Hello World"})
-teamleader.get_company(12345)
+teamleader.get_company({:company_id => 12345})
 teamleader.get_companies({:amount => 100, :pageno => 0, :searchby => "hello"}) # pagination starts at 0
 ```
 
 ### Invoices
 
 ```ruby
-teamleader.get_invoice(12345)
+teamleader.add_invoice({
+    :contact_or_company => "company",
+    :contact_or_company_id => 12345,
+    :sys_department_id => 5678,
+    :description_1 => "My awesome item",
+    :price_1 => 50,
+    :amount_1 => 1
+})
+teamleader.update_invoice_payment_status({:invoice_id => 123, :status => "paid"})
+teamleader.get_invoice({:invoice_id => 123})
+teamleader.download_invoice_pdf({:invoice_id => 123})
 teamleader.get_invoices({:date_from => "01/01/2017", :date_to => "01/05/2017"})
 ```
+
+### Products
+
+```ruby
+teamleader.add_product({
+    :name => "My Awesome Product",
+    :price => 49.99
+})
+teamleader.update_product({:product_id => 123, :price => 39.99})
+teamleader.get_product({:product_id => 123})
+teamleader.delete_product({:product_id => 123})
+teamleader.get_products({:amount => 100, :pageno => 0}) # Pagination starts at 0
+```
+
 
 ## License
 The Teamleader GEM is released under the MIT License.

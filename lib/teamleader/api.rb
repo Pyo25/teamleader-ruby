@@ -103,11 +103,6 @@ module Teamleader
       request "/getProduct.php", params
     end
 
-    def get_product(params={})
-      raise "product_id is required" if params[:product_id].nil?
-      request "/getProduct.php", params
-    end
-
     def get_products(params={})
       raise "amount is required" if params[:amount].nil?
       raise "pageno is required" if params[:pageno].nil?
