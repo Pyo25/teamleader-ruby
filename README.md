@@ -79,6 +79,7 @@ teamleader.update_invoice_payment_status({:invoice_id => 123, :status => "paid"}
 teamleader.get_invoice({:invoice_id => 123})
 teamleader.download_invoice_pdf({:invoice_id => 123})
 teamleader.get_invoices({:date_from => "01/01/2017", :date_to => "01/05/2017"})
+teamleader.get_bookkeeping_accounts({:sys_department_id => 134})
 ```
 
 ### Products

@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2017-09-28
+### Added
+- Add support for getting bookkeeping accounts (cfr `get_bookkeeping_accounts` method)
+
 ## [0.3.1] - 2017-05-12
 ### Fixed
 - Parameter check for `link_contact_to_company`

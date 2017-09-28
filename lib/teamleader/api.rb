@@ -123,6 +123,11 @@ module Teamleader
       request "/getInvoices.php", params
     end
 
+    def get_bookkeeping_accounts(params={})
+      raise "sys_department_id is required" if params[:sys_department_id].nil?
+      request "/getBookkeepingAccounts.php", params
+    end
+
     def add_product(params={})
       raise "name is required" if params[:name].nil?
       raise "price is required" if params[:price].nil?
