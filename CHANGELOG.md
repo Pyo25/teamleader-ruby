@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] - 2017-10-16
+### Added
+- Add methods for manipulating Tickets
+
 ## [0.4.0] - 2017-09-28
 ### Added
 - Add support for getting bookkeeping accounts (cfr `get_bookkeeping_accounts` method)

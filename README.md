@@ -94,7 +94,9 @@ teamleader.get_product({:product_id => 123})
 teamleader.delete_product({:product_id => 123})
 teamleader.get_products({:amount => 100, :pageno => 0}) # Pagination starts at 0
 ```
+### Tickets
 
+Supported methods are: `add_ticket`, `update_ticket`, `add_ticket_message`, `get_tickets`, `get_ticket`, `get_ticket_messages`, `get_ticket_message`, `get_ticket_cloud_url`.
 
 ## License
 The Teamleader GEM is released under the MIT License.

@@ -155,6 +155,51 @@ module Teamleader
       request "/getProducts.php", params
     end
 
+    def add_ticket(params={})
+      raise "client_email is required" if params[:client_email].nil?
+      raise "client_name is required" if params[:client_name].nil?
+      raise "subject is required" if params[:subject].nil?
+      request "/addTicket.php", params      
+    end
+
+    def update_ticket(params={})
+      raise "ticket_id is required" if params[:ticket_id].nil?
+      request "/updateTicket.php", params      
+    end
+
+    def add_ticket_message(params={})
+      raise "ticket_id is required" if params[:ticket_id].nil?
+      raise "message is required" if params[:message].nil?
+      request "/addTicketMessage.php", params      
+    end
+
+    def get_tickets(params={})
+      raise "type is required" if params[:type].nil?
+      request "/getTickets.php", params      
+    end
+
+    def get_ticket(params={})
+      raise "ticket_id is required" if params[:ticket_id].nil?
+      request "/getTickets.php", params      
+    end
+
+    def get_ticket_messages(params={})
+      raise "ticket_id is required" if params[:ticket_id].nil?
+      raise "include_internal_message is required" if params[:include_internal_message].nil?
+      raise "include_third_party_message is required" if params[:include_third_party_message].nil?
+      request "/getTicketMessages.php", params      
+    end
+
+    def get_ticket_message(params={})
+      raise "message_id is required" if params[:message_id].nil?
+      request "/getTicketMessage.php", params
+    end
+
+    def get_ticket_cloud_url(params={})
+      raise "ticket_id is required" if params[:ticket_id].nil?
+      request "/getTicketCloudURL.php", params
+    end
+
     private
     def request(path, data={})
       headers = {
