@@ -156,8 +156,6 @@ module Teamleader
     end
 
     def add_ticket(params={})
-      raise "client_email is required" if params[:client_email].nil?
-      raise "client_name is required" if params[:client_name].nil?
       raise "subject is required" if params[:subject].nil?
       request "/addTicket.php", params      
     end

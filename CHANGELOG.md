@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.5.1] - 2017-10-17
+### Fixed
+- Relax required parameters for `add_ticket` method.
+
 ## [0.5.0] - 2017-10-16
 ### Added
 - Add methods for manipulating Tickets
