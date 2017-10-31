@@ -123,6 +123,12 @@ module Teamleader
       request "/getInvoices.php", params
     end
 
+    def get_creditnotes(params={})
+      raise "date_from is required" if params[:date_from].nil?
+      raise "date_to is required" if params[:date_to].nil?
+      request "/getCreditnotes.php", params
+    end
+
     def get_bookkeeping_accounts(params={})
       raise "sys_department_id is required" if params[:sys_department_id].nil?
       request "/getBookkeepingAccounts.php", params
