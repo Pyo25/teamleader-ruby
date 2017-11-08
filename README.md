@@ -64,6 +64,10 @@ teamleader.get_company({:company_id => 12345})
 teamleader.get_companies({:amount => 100, :pageno => 0, :searchby => "hello"}) # pagination starts at 0
 ```
 
+### Deals
+
+Supported methods are: `add_deal`, `update_deal`, `update_deal_items`, `send_sale_to_client`, `get_deals`, `get_deals_by_contact_or_company`, `get_deals_by_project`, `get_deal`, `get_deal_phase_changes`, `get_all_deal_phase_changes`, `get_deal_phases`, `get_deal_sources`
+
 ### Invoices
 
 ```ruby

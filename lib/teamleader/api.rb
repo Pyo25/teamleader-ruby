@@ -93,18 +93,80 @@ module Teamleader
       request "/getCompanies.php", params
     end
 
+    def add_deal(params={})
+      raise "contact_or_company is required" if params[:contact_or_company].nil?
+      raise "contact_or_company_id is required" if params[:contact_or_company_id].nil?
+      raise "title is required" if params[:title].nil?
+      raise "source is required" if params[:source].nil?
+      request "/addDeal.php", params
+    end
+
+    def update_deal(params={})
+      raise "deal_id is required" if params[:deal_id].nil?
+      request "/updateDeal.php", params
+    end
+
+    def update_deal_items(params={})
+      request "/updateDealItems.php", params
+    end
+
+    def send_sale_to_client(params={})
+      request "/sendSaleToClient.php", params
+    end
+
+    def get_deals(params={})
+      raise "mount is required" if params[:mount].nil?
+      raise "pageno is required" if params[:pageno].nil?
+      request "/getDeals.php", params
+    end
+
+    def get_deals_by_contact_or_company(params={})
+      raise "contact_or_company is required" if params[:contact_or_company].nil?
+      raise "contact_or_company_id is required" if params[:contact_or_company_id].nil?
+      request "/getDealsByContactOrCompany.php", params
+    end
+
+    def get_deals_by_project(params={})
+      raise "project_id is required" if params[:project_id].nil?
+      request "/getDealsByProject.php", params
+    end
+
+    def get_deal(params={})
+      raise "deal_id is required" if params[:deal_id].nil?
+      request "/getDeal.php", params
+    end
+
+    def get_deal_phase_changes(params={})
+      raise "deal_id is required" if params[:deal_id].nil?
+      request "/getDealPhaseChanges.php", params
+    end
+
+    def get_all_deal_phase_changes(params={})
+      raise "date_from is required" if params[:date_from].nil?
+      raise "date_to is required" if params[:date_to].nil?
+      request "/getAllDealPhaseChanges.php", params
+    end
+
+    def get_deal_phases(params={})
+      request "/getDealPhases.php", params
+    end
+
+    def get_deal_sources(params={})
+      request "/getDealSources.php", params
+    end
+
     def add_invoice(params={})
       raise "contact_or_company is required" if params[:contact_or_company].nil?
       raise "contact_or_company_id is required" if params[:contact_or_company_id].nil?
       raise "sys_department_id is required" if params[:sys_department_id].nil?
-      request "/addInvoice.php", params    
+      request "/addInvoice.php", params
     end
 
     def update_invoice_payment_status(params={})
       raise "invoice_id is required" if params[:invoice_id].nil?
       raise "status is required" if params[:status].nil?
       raise "status must be 'paid' or 'not_paid'" unless ['paid', 'not_paid'].include?(params[:status])
-      request "/setInvoicePaymentStatus.php", params    
+      request "/setInvoicePaymentStatus.php", params
     end
 
     def get_invoice(params={})
@@ -163,35 +225,35 @@ module Teamleader
 
     def add_ticket(params={})
       raise "subject is required" if params[:subject].nil?
-      request "/addTicket.php", params      
+      request "/addTicket.php", params
     end
 
     def update_ticket(params={})
       raise "ticket_id is required" if params[:ticket_id].nil?
-      request "/updateTicket.php", params      
+      request "/updateTicket.php", params
     end
 
     def add_ticket_message(params={})
       raise "ticket_id is required" if params[:ticket_id].nil?
       raise "message is required" if params[:message].nil?
-      request "/addTicketMessage.php", params      
+      request "/addTicketMessage.php", params
     end
 
     def get_tickets(params={})
       raise "type is required" if params[:type].nil?
-      request "/getTickets.php", params      
+      request "/getTickets.php", params
     end
 
     def get_ticket(params={})
       raise "ticket_id is required" if params[:ticket_id].nil?
-      request "/getTickets.php", params      
+      request "/getTickets.php", params
     end
 
     def get_ticket_messages(params={})
       raise "ticket_id is required" if params[:ticket_id].nil?
       raise "include_internal_message is required" if params[:include_internal_message].nil?
       raise "include_third_party_message is required" if params[:include_third_party_message].nil?
-      request "/getTicketMessages.php", params      
+      request "/getTicketMessages.php", params
     end
 
     def get_ticket_message(params={})

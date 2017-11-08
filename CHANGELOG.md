@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] - 2017-11-08
+### Added
+- Methods for manipulating Deals
+
 ## [0.6.0] - 2017-10-31
 ### Added
 - `get_creditnotes` method
