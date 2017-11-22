@@ -191,6 +191,30 @@ module Teamleader
       request "/getCreditnotes.php", params
     end
 
+    def send_invoice(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      raise "email_to is required" if params[:email_to].nil?
+      raise "email_subject is required" if params[:email_subject].nil?
+      raise "email_text is required" if params[:email_text].nil?
+      request "/sendInvoice.php", params
+    end
+
+    def get_invoice_reminder_templates(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      request "/getInvoiceReminderTemplates.php", params
+    end
+
+    def get_invoice_reminder_template_content(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      raise "template_id is required" if params[:template_id].nil?
+      request "/getInvoiceReminderTemplateContent.php", params
+    end
+
+    def get_invoice_cloud_url(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      request "/getInvoiceCloudURL.php", params
+    end
+
     def get_bookkeeping_accounts(params={})
       raise "sys_department_id is required" if params[:sys_department_id].nil?
       request "/getBookkeepingAccounts.php", params

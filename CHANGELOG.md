@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2017-11-08
+### Added
+- Some methods related to invoices: `send_invoice`, `get_invoice_reminder_templates`, `get_invoice_reminder_template_content`, `get_invoice_cloud_url`
+
 ## [0.7.0] - 2017-11-08
 ### Added
 - Methods for manipulating Deals
