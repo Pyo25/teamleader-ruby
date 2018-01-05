@@ -290,6 +290,20 @@ module Teamleader
       request "/getTicketCloudURL.php", params
     end
 
+    def add_note(params={})
+      raise "object_type is required" if params[:object_type].nil?
+      raise "object_id is required" if params[:object_id].nil?
+      raise "note_title is required" if params[:note_title].nil?
+      request "/addNote.php", params
+    end
+
+    def get_notes(params={})
+      raise "object_type is required" if params[:object_type].nil?
+      raise "object_id is required" if params[:object_id].nil?
+      raise "pageno is required" if params[:pageno].nil?
+      request "/addNote.php", params
+    end
+
     private
     def request(path, data={})
       headers = {
