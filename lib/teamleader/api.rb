@@ -304,6 +304,38 @@ module Teamleader
       request "/addNote.php", params
     end
 
+    def add_company(params={})
+      raise "name is required" if params[:name].nil?
+      request "/addCompany.php", params
+    end
+
+    def update_company(params={})
+      raise "company_id is required" if params[:company_id].nil?
+      raise "track_changes is required" if params[:track_changes].nil?
+      request "/updateCompany.php", params
+    end
+
+    def delete_company(params={})
+      raise "company_id is required" if params[:company_id].nil?
+      request "/deleteCompany.php", params
+    end
+
+    def get_companies(params={})
+      raise "amount is required" if params[:amount].nil?
+      raise "pageno is required" if params[:pageno].nil?
+      request "/getCompanies.php", params
+    end
+
+    def get_company(params={})
+      raise "company_id is required" if params[:company_id].nil?
+      request "/getCompany.php", params
+    end
+
+    def get_business_types(params={})
+      raise "country is required" if params[:country].nil?
+      request "/getBusinessTypes.php", params
+    end
+
     private
     def request(path, data={})
       headers = {

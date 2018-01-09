@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.10.0] - 2018-01-09
+### Added
+- All methods related to companies: `add_company`, `update_company`, `delete_company`, `get_companies`, `get_company`, `get_business_types`
+
 ## [0.9.0] - 2018-01-05
 ### Added
 - Some methods related to notes: `add_note`, `get_notes`
