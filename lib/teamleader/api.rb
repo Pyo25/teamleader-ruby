@@ -76,23 +76,6 @@ module Teamleader
       request "/getContactCompanyRelations.php", params
     end
 
-    # Returns the ID of the company
-    def add_company(params={})
-      raise "name is required" if params[:name].nil?
-      request "/addCompany.php", params
-    end
-
-    def get_company(params={})
-      raise "company_id is required" if params[:company_id].nil?
-      request "/getCompany.php", params
-    end
-
-    def get_companies(params={})
-      raise "amount is required" if params[:amount].nil?
-      raise "pageno is required" if params[:pageno].nil?
-      request "/getCompanies.php", params
-    end
-
     def add_deal(params={})
       raise "contact_or_company is required" if params[:contact_or_company].nil?
       raise "contact_or_company_id is required" if params[:contact_or_company_id].nil?
