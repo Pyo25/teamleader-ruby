@@ -1,8 +1,8 @@
 # Teamleader
 
-A ruby wrapper around Teamleader.eu API.
+A ruby wrapper around Teamleader.eu API v1.
 
-**This Teamleader client is still in development, only a few endpoints are supported (see below).**
+**Some endpoints are still missing. Don't hesitate to open an issue or a PR if you need one of them.**
 
 ## Installation
 
