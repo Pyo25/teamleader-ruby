@@ -87,6 +87,9 @@ teamleader.get_creditnotes({:date_from => "01/01/2017", :date_to => "01/05/2017"
 teamleader.get_bookkeeping_accounts({:sys_department_id => 134})
 ```
 
+#### Other supported methods
+`book_draft_invoice`, `update_invoice`, `update_invoice_comments`, `delete_invoice`, `get_creditnote`, `get_invoices_by_project`, `get_creditnotes_by_project`, `get_invoices_by_deal`, `add_creditnote`
+
 ### Products
 
 ```ruby

@@ -152,9 +152,35 @@ module Teamleader
       request "/setInvoicePaymentStatus.php", params
     end
 
+    def book_draft_invoice(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      request "/bookDraftInvoice.php", params
+    end
+
+    def update_invoice(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      request "/updateInvoice.php", params
+    end
+
+    def update_invoice_comments(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      raise "comments is required" if params[:comments].nil?
+      request "/updateInvoiceComments.php", params
+    end
+
+    def delete_invoice(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      request "/deleteInvoice.php", params
+    end
+
     def get_invoice(params={})
       raise "invoice_id is required" if params[:invoice_id].nil?
       request "/getInvoice.php", params
+    end
+
+    def get_creditnote(params={})
+      raise "creditnote_id is required" if params[:creditnote_id].nil?
+      request "/getCreditnote.php", params
     end
 
     def download_invoice_pdf(params={})
@@ -172,6 +198,26 @@ module Teamleader
       raise "date_from is required" if params[:date_from].nil?
       raise "date_to is required" if params[:date_to].nil?
       request "/getCreditnotes.php", params
+    end
+
+    def get_invoices_by_project(params={})
+      raise "project_id is required" if params[:project_id].nil?
+      request "/getInvoicesByProject.php", params
+    end
+
+    def get_creditnotes_by_project(params={})
+      raise "project_id is required" if params[:project_id].nil?
+      request "/getCreditnotesByProject.php", params
+    end
+
+    def get_invoices_by_deal(params={})
+      raise "deal_id is required" if params[:deal_id].nil?
+      request "/getInvoicesByDeal.php", params
+    end
+
+    def add_creditnote(params={})
+      raise "invoice_id is required" if params[:invoice_id].nil?
+      request "/addCreditnote.php", params
     end
 
     def send_invoice(params={})
