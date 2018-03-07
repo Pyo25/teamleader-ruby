@@ -386,7 +386,7 @@ module Teamleader
       else
         err = "unknown error"
         begin
-          err = JSON.parse(response.body)["reason"]
+          err = JSON.parse(response.body)["reason"] || "#{response.body}"
         rescue
           err = "#{response.body}"
         end

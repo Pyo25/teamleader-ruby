@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.11.1] - 2018-03-07
+### Fixed
+- Error when the API responds with an error but no `reason` attribute in the response body.
+
 ## [0.11.0] - 2018-02-15
 ### Added
 - New methods related to invoices and credit notes: `book_draft_invoice`, `update_invoice`, `update_invoice_comments`, `delete_invoice`, `get_creditnote`, `get_invoices_by_project`, `get_creditnotes_by_project`, `get_invoices_by_deal`, `add_creditnote`
