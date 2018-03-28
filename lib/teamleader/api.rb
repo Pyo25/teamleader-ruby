@@ -365,6 +365,12 @@ module Teamleader
       request "/getBusinessTypes.php", params
     end
 
+    def get_subscriptions(params={})
+      raise "amount is required" if params[:amount].nil?
+      raise "pageno is required" if params[:pageno].nil?
+      request "/getSubscriptions.php", params
+    end
+
     private
     def request(path, data={})
       headers = {

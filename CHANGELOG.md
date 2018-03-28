@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.12.0] - 2018-03-28
+### Added
+- New methods related to subscriptions: `get_subscriptions`, `get_all_subscriptions`
+
 ## [0.11.1] - 2018-03-07
 ### Fixed
 - Error when the API responds with an error but no `reason` attribute in the response body.
