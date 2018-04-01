@@ -1,4 +1,5 @@
 require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/api'))
+require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/extended_api'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/version'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/configuration'))
 
@@ -15,6 +16,6 @@ module Teamleader
   end
 
   def new(group = Teamleader.configuration.api_group, secret = Teamleader.configuration.api_secret)
-    Api.new(group, secret)
+    ExtendedApi.new(group, secret)
   end
 end
