@@ -30,6 +30,16 @@ teamleader = Teamleader.new('Your API group', 'Your API secret')
 You can find your API key in your Teamleader account, under Settings > API & Webhooks. API access is available for every Teamleader account.
 Note that you need to be admin to access this page.
 
+### Configuration
+For Rails application create a configuration file `config/initializers/teamleader.rb`. You can do this anywhere in your application before you make API calls using the gem.
+
+```ruby
+Teamleader.configure do |config|
+  config.api_group = '45678'
+  config.api_secret = '31e56cf3b3c259f56666ba4a6089ee91c3150683611834f7eb2f5a7a4f039a17910f1fa2d65d282e9c344abcf895dad80a89b13af8fe917dfed1e0798c83350c'
+end
+```
+
 ## Available methods
 When a method expects a hash as argument, the hash keys have the same name as described in [Teamleader API documentation](http://apidocs.teamleader.be/).
 
