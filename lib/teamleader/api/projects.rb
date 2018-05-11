@@ -11,6 +11,8 @@ module Teamleader
     end
 
     def get_projects_by_client(params={})
+      required_params(%i[contact_or_company contact_or_company_id deep_search], params)
+      request '/getProjectsByClient.php', params
     end
 
     def add_project(params={})
