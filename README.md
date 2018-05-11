@@ -112,6 +112,36 @@ teamleader.get_product({:product_id => 123})
 teamleader.delete_product({:product_id => 123})
 teamleader.get_products({:amount => 100, :pageno => 0}) # Pagination starts at 0
 ```
+
+### Projects
+
+```ruby
+teamleader.get_project({ :project_id => 123 })
+teamleader.get_projects_by_client({
+  contact_or_company: 'contact',
+  contact_or_company_id: '123',
+  deep_search: 1
+})
+
+teamleader.add_project({
+  :project_name => 123,
+  :project_budget => 300,
+  :project_responsible_user_id => 123,
+  :project_start_date => '12/01/2017',
+  :milestone_title => 'milestone title',
+  :milestone_budget => 200,
+  :milestone_invoiceable => 0,
+  :milestone_due_date => '12/03/2017',
+  :milestone_responsible_user_id => 123
+})
+teamleader.update_project({
+  :project_id => 123,
+  :track_changes => 0,
+  :title => "New Project Title"
+})
+teamleader.get_projects({ :amount => 50, pageno: 0 })
+# Pagination starts at 0
+```
 ### Tickets
 
 Supported methods are: `add_ticket`, `update_ticket`, `add_ticket_message`, `get_tickets`, `get_ticket`, `get_ticket_messages`, `get_ticket_message`, `get_ticket_cloud_url`.
