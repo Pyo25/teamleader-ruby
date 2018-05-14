@@ -120,6 +120,30 @@ Supported methods are: `add_ticket`, `update_ticket`, `add_ticket_message`, `get
 
 Supported methods are: `add_note`, `get_notes`
 
+### Files
+
+```ruby
+teamleader.get_file_info({ :file_id => '1236412' })
+
+teamleader.download_file({ :file_id => '1236412' })
+
+teamleader.upload_file({
+  :object_type => 'company',
+  :object_id => '1236412',
+  :file_content => 'Base64 encoded version the file',
+  :file_name => 'file.rb'
+})
+
+teamleader.delete_file({ :file_id => '1236412' })
+
+teamleader.get_files({
+  :amount => 100,
+  :pageno => 0,
+  :object_type => 'contact',
+  :object_id => '1234567')
+# Pagination starts at 0
+```
+
 ## License
 The Teamleader GEM is released under the MIT License.
 
