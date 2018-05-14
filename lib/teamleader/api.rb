@@ -8,6 +8,7 @@ module Teamleader
 
   class Api
     include Teamleader::Files
+    include Teamleader::Projects
 
     def initialize(group, secret)
       @api_group = group
@@ -100,7 +101,7 @@ module Teamleader
     end
 
     def get_deals(params={})
-      raise "mount is required" if params[:mount].nil?
+      raise "amount is required" if params[:amount].nil?
       raise "pageno is required" if params[:pageno].nil?
       request "/getDeals.php", params
     end
