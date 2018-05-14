@@ -7,6 +7,8 @@ module Teamleader
   API_BASE_URL = "https://app.teamleader.eu/api"
 
   class Api
+    include Teamleader::Files
+
     def initialize(group, secret)
       @api_group = group
       @api_secret = secret
@@ -372,6 +374,7 @@ module Teamleader
     end
 
     private
+
     def request(path, data={})
       headers = {
         "Content-Type" => "application/x-www-form-urlencoded"
@@ -398,6 +401,10 @@ module Teamleader
         end
         raise "HTTP Error #{code}: " + err
       end
+    end
+
+    def required_params(attributes, params)
+      attributes.each { |attr| raise "#{attr} is required" if params[attr].nil? }
     end
   end
 end
