@@ -1,3 +1,5 @@
+
+require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/api/files'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/api/projects'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/api'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'teamleader/extended_api'))

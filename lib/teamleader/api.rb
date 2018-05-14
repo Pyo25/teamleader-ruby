@@ -7,6 +7,7 @@ module Teamleader
   API_BASE_URL = "https://app.teamleader.eu/api"
 
   class Api
+    include Teamleader::Files
     include Teamleader::Projects
 
     def initialize(group, secret)
