@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.13.0] - 2018-10-01
+### Added
+- New methods related to calls: `get_calls`, `get_call`, `add_callback`
+
 ## [0.12.0] - 2018-03-28
 ### Added
 - New methods related to subscriptions: `get_subscriptions`, `get_all_subscriptions`
