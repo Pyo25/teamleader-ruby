@@ -175,6 +175,19 @@ teamleader.get_files({
 # Pagination starts at 0
 ```
 
+### Callbacks
+```ruby
+teamleader.add_callback({
+  due_date: 1538400423,
+  hour: '10h15',
+  user_id: '1234',
+  for: 'contact',
+  for_id: '9876'
+})
+teamleader.get_calls(amount: 10, pageno: 0)
+teamleader.get_call(call_id: '123456')
+```
+
 ## License
 The Teamleader GEM is released under the MIT License.
 

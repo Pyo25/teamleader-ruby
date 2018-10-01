@@ -9,6 +9,7 @@ module Teamleader
   class Api
     include Teamleader::Files
     include Teamleader::Projects
+    include Teamleader::Calls
 
     def initialize(group, secret)
       @api_group = group
