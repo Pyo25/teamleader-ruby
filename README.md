@@ -170,7 +170,8 @@ teamleader.get_files({
   :amount => 100,
   :pageno => 0,
   :object_type => 'contact',
-  :object_id => '1234567')
+  :object_id => '1234567'
+})
 # Pagination starts at 0
 ```
 
