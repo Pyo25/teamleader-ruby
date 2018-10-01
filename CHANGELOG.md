@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.14.0] - 2018-10-01
+- Sync with version published on Rubygems
+
 ## [0.13.0] - 2018-10-01
 ### Added
 - New methods related to calls: `get_calls`, `get_call`, `add_callback`
