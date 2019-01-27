@@ -188,6 +188,9 @@ teamleader.get_calls(amount: 10, pageno: 0)
 teamleader.get_call(call_id: '123456')
 ```
 
+### Subscriptions
+Available methods are: `get_subscriptions`, `get_all_subscriptions`
+
 ## License
 The Teamleader GEM is released under the MIT License.
 
