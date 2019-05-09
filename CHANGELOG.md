@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.15.0]
+- New method related to credit notes: `download_creditnote_pdf`
+
 ## [0.14.0] - 2018-10-01
 - Sync with version published on Rubygems
 
