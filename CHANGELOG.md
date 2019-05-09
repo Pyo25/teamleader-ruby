@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [0.15.0]
+## [0.15.0] - 2019-05-09
 - New method related to credit notes: `download_creditnote_pdf`
 
 ## [0.14.0] - 2018-10-01
