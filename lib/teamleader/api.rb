@@ -192,6 +192,11 @@ module Teamleader
       request "/downloadInvoicePDF.php", params
     end
 
+    def download_creditnote_pdf(params={})
+      raise "creditnote_id is required" if params[:creditnote_id].nil?
+      request "/downloadCreditnotePDF.php", params
+    end
+
     def get_invoices(params={})
       raise "date_from is required" if params[:date_from].nil?
       raise "date_to is required" if params[:date_to].nil?
