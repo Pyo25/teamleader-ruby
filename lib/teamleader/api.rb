@@ -7,6 +7,7 @@ module Teamleader
   API_BASE_URL = "https://app.teamleader.eu/api"
 
   class Api
+    include Teamleader::CustomFields
     include Teamleader::Files
     include Teamleader::Projects
     include Teamleader::Calls

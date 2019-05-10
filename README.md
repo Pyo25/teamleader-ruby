@@ -191,6 +191,9 @@ teamleader.get_call(call_id: '123456')
 ### Subscriptions
 Available methods are: `get_subscriptions`, `get_all_subscriptions`
 
+### Custom Fields
+Available methods are: `get_custom_fields`, `get_custom_field_info`, `add_custom_field_option`
+
 ## License
 The Teamleader GEM is released under the MIT License.
 
