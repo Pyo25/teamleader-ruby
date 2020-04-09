@@ -191,7 +191,7 @@ teamleader.get_call(call_id: '123456')
 ```
 
 ### Subscriptions
-Available methods are: `get_subscriptions`, `get_all_subscriptions`
+Available methods are: `get_subscriptions`, `get_all_subscriptions`, `add_subscription`, `update_subscription`, `delete_subscription`, `get_subscription`, `get_invoices_by_subscription`, `get_related_subscriptions_by_invoice`, `get_subscriptions_by_deal`, `get_subscriptions_by_contact_or_company`
 
 ### Custom Fields
 Available methods are: `get_custom_fields`, `get_custom_field_info`, `add_custom_field_option`
