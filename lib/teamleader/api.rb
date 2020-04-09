@@ -11,6 +11,7 @@ module Teamleader
     include Teamleader::Files
     include Teamleader::Projects
     include Teamleader::Calls
+    include Teamleader::Subscriptions
 
     def initialize(group, secret)
       @api_group = group
