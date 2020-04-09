@@ -2,7 +2,9 @@
 
 A ruby wrapper around Teamleader.eu API v1.
 
-**Some endpoints are still missing. Don't hesitate to open an issue or a PR if you need one of them.**
+**Please note that this gem is linked to the [deprecated Teamleader API](https://apidocs.teamleader.be/). Teamleader recommends to use the [new Teamleader API](https://developer.teamleader.eu/).**
+
+Some endpoints are still missing. Don't hesitate to open an issue or a PR if you need one of them.
 
 ## Installation
 
