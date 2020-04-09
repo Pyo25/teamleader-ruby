@@ -1,8 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [0.16.1] - 2020-04-09
+## [0.17.0] - 2020-04-09
 - `get_all_subscriptions` method accepts optional parameters (like `selected_customfields` or `searchby`)
+- New methods related to subscriptions: `add_subscription`, `update_subscription`, `delete_subscription`, `get_subscription`, `get_invoices_by_subscription`, `get_related_subscriptions_by_invoice`, `get_subscriptions_by_deal`, `get_subscriptions_by_contact_or_company`
 
 ## [0.16.0] - 2019-05-10
 - New method related to custom fields: `get_custom_fields`, `get_custom_field_info`, `add_custom_field_option`
