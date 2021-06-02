@@ -4,7 +4,7 @@ require 'net/http'
 require 'uri'
 
 module Teamleader
-  API_BASE_URL = "https://app.teamleader.eu/api"
+  API_BASE_URL = "https://focus.teamleader.eu/api"
 
   class Api
     include Teamleader::CustomFields
